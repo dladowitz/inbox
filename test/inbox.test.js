@@ -37,7 +37,7 @@ describe('Inbox', () => {
   });
 
   it('can set a message', async () => {
-    await inbox.methods.setMessage('Bye there').send({ from: accounts[0], gas: '1000000'});
+    await inbox.methods.setMessage('Bye there').send({ from: accounts[0] });
     assert.equal('Bye there', await inbox.methods.message().call());
   });
 });
